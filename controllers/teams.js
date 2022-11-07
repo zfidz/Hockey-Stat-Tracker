@@ -1,5 +1,5 @@
-const Team = require('../models/teams')
+const Team = require('../models/team')
 
 module.exports = {
-    
+
 }
