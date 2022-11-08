@@ -25,7 +25,7 @@ module.exports = {
     }
     
     function show(req,res) {
-        Team.findById(req.params.id, function(err, movie) {
-        res.render('teams/show', { title: 'Team Detail', movie})
+        Team.findById(req.params.id, function(err, team) {
+        res.render('teams/show', { title: 'Team Detail', team})
         })
     }
