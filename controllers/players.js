@@ -8,7 +8,14 @@ module.exports = {
 
 
 function create(req, res){
-
+    Team.findById(req.params.id, function(err, team) {
+        const player = new Player(req.body)
+        player.save(function(err) {
+          if (err) return res.redirect(`/teams/${team._id}/players/new`)
+          res.redirect(`/teams/${team._id}`)
+        })
+    console.log(team)
+      })
     }
 
 
