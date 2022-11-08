@@ -1,5 +1,23 @@
 <%- include('../partials/header') %> 
 
-
+<form id = "new-form" action="/teams" method="POST">
+    <label>Team:</label>
+    <input type="String" name="name">
+    <label>City:</label>
+    <input type="String" name="city">
+    <label>Arena:</label>
+    <input type="String" name="arena">
+    <label>Year Established:</label>
+    <input type="Number" name="year">
+    <label>Stanley Cups:</label>
+    <input type="Number" name="cups">
+    <label>Games Played:</label>
+    <input type="Number" name="gamesPlayed">
+    <label>Wins:</label>
+    <input type="Number" name="wins">
+    <label>Losses:</label>
+    <input type="Number" name="losses">
+    <input type= "submit" value = "Add Team">
+</form>
 
 <%- include('../partials/footer') %> 

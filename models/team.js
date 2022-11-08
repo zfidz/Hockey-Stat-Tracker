@@ -9,7 +9,7 @@ const teamSchema = new Schema({
     cups: Number,
     gamesPlayed: Number,
     wins: Number,
-    Losses: Number,
+    losses: Number,
     players: String
 })
 
