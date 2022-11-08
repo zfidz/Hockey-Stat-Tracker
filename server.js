@@ -13,6 +13,7 @@ require("./config/passport");
 
 var indexRouter = require("./routes/index");
 var teamsRouter = require("./routes/teams")
+var playersRouter = require("./routes/players")
 var usersRouter = require("./routes/users");
 
 var app = express();
@@ -51,6 +52,7 @@ app.use(function (req, res, next) {
 // ROUTES
 app.use("/", indexRouter)
 app.use('/teams', teamsRouter)
+app.use('/teams', playersRouter)
 app.use("/users", usersRouter)
 
 // catch 404 and forward to error handler

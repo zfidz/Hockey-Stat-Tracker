@@ -1,9 +1,7 @@
 <%- include('../partials/header') %> 
 
 <% teams.forEach(t => { %>
- <%= t.city %>
- <%= t.name %> 
- <a href="/teams/<%=t._id %>">Stats</a>
+ <a href="/teams/<%=t._id %>"> <%= t.city %> <%= t.name %></a>
 <% }) %>
 
 <a href="/teams/new" <%- title === 'Add Team' ? 'class="active"' : '' %>>Add Team</a>

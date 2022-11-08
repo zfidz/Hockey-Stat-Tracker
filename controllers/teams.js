@@ -16,6 +16,7 @@ module.exports = {
     function newTeam(req,res) {
         res.render('teams/new', { title : 'Add Team'})
     }
+    
     function create(req,res) {
         const team = new Team(req.body)
         team.save(function(err) {
