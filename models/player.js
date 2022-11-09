@@ -11,6 +11,7 @@ const playerSchema = new Schema({
     assists: Number,
     pim: Number,
     plusMinus: Number,
+    team: [{type: Schema.Types.ObjectId, ref: 'Team'}]
 })
 
 module.exports = mongoose.model('Player', playerSchema)

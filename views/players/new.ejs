@@ -1,3 +1,25 @@
 <%- include('../partials/header') %>
-test add player
+<form action="/teams/<%=team._id%>/players" method="POST">
+    <label>First Name:</label>
+    <input type="String" name="firstName">
+    <label>Last Name:</label>
+    <input type="String" name="lastName">
+    <label>Position:</label>
+    <input type="String" name="position">
+    <label>Games Played:</label>
+    <input type="Number" name="gamesPlayed">
+    <label>Points:</label>
+    <input type="Number" name="points">
+    <label>Goals:</label>
+    <input type="Number" name="goals">
+    <label>Assists:</label>
+    <input type="Number" name="assists">
+    <label>PIM:</label>
+    <input type="Number" name="pim">
+    <label>+/-</label>
+    <input type="Number" name="plusMinus">
+    <label>Current Team</label>
+    <input type="String" class="hide" name="team" value="<%=team.id%>">
+    <input type= "submit" value = "Add Team">       
+</form>
 <%-include('../partials/footer')%>
