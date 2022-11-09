@@ -7,8 +7,8 @@ const isLoggedIn = require("../config/auth");
 
 /* GET home page. */
 router.get("/", function (req, res, next) {
-  res.render("index", { title: "Home / Public Page" });
-});
+  res.redirect("/teams")
+})
 
 router.get("/private", isLoggedIn, function (req, res) {
   res.render("private", { title: "Private Page" });

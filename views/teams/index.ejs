@@ -1,9 +1,40 @@
 <%- include('../partials/header') %> 
 
-<% teams.forEach(t => { %>
- <a href="/teams/<%=t._id %>"> <%= t.city %> <%= t.name %></a>
-<% }) %>
 
+<div class="container text-center"></div>
+<div class="row">
+<div class="col">
+      Team 
+</div>
+ 
+<div class="col">
+        Games Played
+</div>
+<div class="col">
+        Wins
+</div>
+<div class="col">
+        Losses
+</div>
+</div>
+<% teams.forEach(t => { %>
+    <div class="row">
+        <div class="col">
+        <a href="/teams/<%=t._id %>"> <%= t.city %> <%= t.name %></a>            
+        </div>
+        <div class="col">
+            <%= t.gamesPlayed %> 
+        </div>
+        <div class="col">
+            <%= t.wins %> 
+        </div>
+        <div class="col">
+            <%= t.losses %>
+        </div>
+    </div>
+        <% }) %>
+
+</div>
 <a href="/teams/new" <%- title === 'Add Team' ? 'class="active"' : '' %>>Add Team</a>
 
 <%- include('../partials/footer') %> 

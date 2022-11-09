@@ -6,7 +6,6 @@ module.exports = {
     create
 }
 
-
 function create(req, res){
     Team.findById(req.params.id, function(err, team) {
         const player = new Player(req.body)
@@ -17,7 +16,6 @@ function create(req, res){
     console.log(team)
       })
     }
-
 
 function newPlayer(req,res) {
             Team.findById(req.params.id, function(err, team) {
