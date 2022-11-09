@@ -1,5 +1,6 @@
+const { Template } = require('ejs')
 const Player = require('../models/player')
-//const Team = require('../models/team')
+const Team = require('../models/team')
 
 module.exports = {
     new: newPlayer,
@@ -16,6 +17,7 @@ module.exports = {
 
 function create(req, res){
         const player = new Player(req.body)
+        player.team.push(req.body.team)
         player.save(function(err) {
           if (err) return res.redirect(`/players/new`)
           res.redirect('/players')
@@ -23,8 +25,10 @@ function create(req, res){
       }
 
 function newPlayer(req,res) {
-res.render('players/new', {title: 'New Player'})
-            }
+  Team.find({}, function(err, allTeams) {
+res.render('players/new', {title: 'New Player', allTeams})    
+  })
+ }
 
 function show(req,res) {
   Player.findById(req.params.id, function(err, player) {

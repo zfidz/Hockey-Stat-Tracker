@@ -3,5 +3,9 @@
 <%= team.city %>
 <%= team.name %>
 <%= team.arena %>
+ 
+<% players.forEach(player => { %> 
+    <%=player.firstName%>
+    <% }) %> 
 
 <%- include('../partials/footer') %> 

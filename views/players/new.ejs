@@ -20,7 +20,13 @@
     <label>+/-</label>
     <input type="Number" name="plusMinus">
     <label>Current Team</label>
+    <select name="team">
+        <% allTeams.forEach(team => { %>
+         <option value="<%= team.id %>"><%= team.name %> </option>
+        <% }) %>
+    </select>
     <input type= "submit" value = "Add Player"> 
 </form>
+
 
 <%-include('../partials/footer')%>
