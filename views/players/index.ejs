@@ -1,0 +1,43 @@
+<%- include('../partials/header') %> 
+
+
+<div class="container text-center"></div>
+<div class="row">
+<div class="col">
+      Name 
+</div>
+ 
+<div class="col">
+        Games Played
+</div>
+<div class="col">
+        Points
+</div>
+<div class="col">
+        Goals
+</div>
+<div class="col">
+    Assists
+</div>
+</div>
+</div>
+<% players.forEach(p => { %>
+    <div class="row">
+        <div class="col">
+<a href="/players/<%=p._id %>"><%= p.firstName %> <%= p.lastName %></a>       
+        </div>
+        <div class="col">
+            <%= p.gamesPlayed %> 
+        </div>
+        <div class="col">
+            <%= p.points %> 
+        </div>
+        <div class="col">
+            <%= p.goals %>
+        </div>
+        <div class="col">
+            <%= p.assists %>
+        </div>
+    </div>
+        <% }) %>
+<%- include('../partials/footer') %> 

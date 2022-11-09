@@ -1,24 +1,33 @@
 const Player = require('../models/player')
-const Team = require('../models/team')
+//const Team = require('../models/team')
 
 module.exports = {
     new: newPlayer,
-    create
+    create,
+    show,
+    index
+}
+
+  function index(req,res) {
+    Player.find({}, function(err, players) {
+      res.render('players/index', {title: 'All Players', players })
+  })
 }
 
 function create(req, res){
-    Team.findById(req.params.id, function(err, team) {
         const player = new Player(req.body)
         player.save(function(err) {
-          if (err) return res.redirect(`/teams/${team._id}/players/new`)
-          res.redirect(`/teams/${team._id}`)
+          if (err) return res.redirect(`/players/new`)
         })
-    console.log(team)
-      })
-    }
+      }
 
 function newPlayer(req,res) {
-            Team.findById(req.params.id, function(err, team) {
-                res.render('players/new', {title: 'New Player', team})
-            })
-}
+res.render('players/new', {title: 'New Player'})
+            }
+
+function show(req,res) {
+  Player.findById(req.params.id, function(err, player) {
+      res.render('players/show', { title: 'Player Detail', player}) 
+      if(err) return res.redirect('/')   
+      })
+  }

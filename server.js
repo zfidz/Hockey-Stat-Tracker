@@ -51,7 +51,7 @@ app.use(function (req, res, next) {
 // ROUTES
 app.use("/", indexRouter)
 app.use('/teams', teamsRouter)
-app.use('/teams', playersRouter)
+app.use('/players', playersRouter)
 app.use("/users", usersRouter)
 
 // catch 404 and forward to error handler

@@ -1,5 +1,6 @@
 <%- include('../partials/header') %>
-<form action="/teams/<%=team._id%>/players" method="POST">
+
+<form id="new-form" action="/players" method="POST">
     <label>First Name:</label>
     <input type="String" name="firstName">
     <label>Last Name:</label>
@@ -19,7 +20,7 @@
     <label>+/-</label>
     <input type="Number" name="plusMinus">
     <label>Current Team</label>
-    <input type="String" class="hide" name="team" value="<%=team.id%>">
-    <input type= "submit" value = "Add Team">       
+    <input type= "submit" value = "Add Team"> 
 </form>
+
 <%-include('../partials/footer')%>

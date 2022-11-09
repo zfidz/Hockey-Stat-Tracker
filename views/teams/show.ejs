@@ -1,16 +1,12 @@
 <%- include('../partials/header') %> 
 
 <%= team.city %>
-
 <%= team.name %>
-
 <%= team.arena %>
 
 <%players.forEach(p=> { %>
-<%= p.firstName %> 
+ <%= p.firstName %> 
 <%= p.lastName %>
     <% }) %> 
-
-<button><a href="/teams/<%=team._id%>/players/new">Add Player</a></button>
 
 <%- include('../partials/footer') %> 

@@ -27,9 +27,7 @@ module.exports = {
     
     function show(req,res) {
         Team.findById(req.params.id, function(err, team) {
-            Player.find({team: team._id}, function(err, players){
-            res.render('teams/show', { title: 'Team Detail', team, players}) 
+            res.render('teams/show', { title: 'Team Detail', team}) 
             if(err) return res.redirect('/')   
             })
-        })
-    }
+        }

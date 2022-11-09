@@ -13,6 +13,10 @@
 <body>
     <nav>
             <a href="/">Home</a>
+            <a href="/players/new" <%- title === 'Add Player' ? 'class="active"' : '' %>>Add Player</a>
+            <a href="/players" <%- title === 'Players' ? 'class="active"' : '' %>>Players</a>
+            <a href="/teams" <%- title === 'Teams' ? 'class="active"' : '' %>>Teams</a>
+            <a href="/teams/new" <%- title === 'Add Teams' ? 'class="active"' : '' %>>Add Teams</a>
             <% if (user) { %>
               <a href="/private">Private Page</a>
               <a href="/logout">Log Out</a>

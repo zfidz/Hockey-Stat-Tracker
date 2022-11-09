@@ -1,9 +1,9 @@
-var express = require("express");
-var router = express.Router();
-var passport = require("passport");
+var express = require("express")
+var router = express.Router()
+var passport = require("passport")
 
 // import private route middleware
-const isLoggedIn = require("../config/auth");
+const isLoggedIn = require("../config/auth")
 
 /* GET home page. */
 router.get("/", function (req, res, next) {
@@ -11,8 +11,8 @@ router.get("/", function (req, res, next) {
 })
 
 router.get("/private", isLoggedIn, function (req, res) {
-  res.render("private", { title: "Private Page" });
-});
+  res.render("private", { title: "Private Page" })
+})
 
 // OAuth Routes
 
@@ -23,7 +23,7 @@ router.get(
     scope: ["profile", "email"],
     prompt: "select_account",
   })
-);
+)
 
 // OAuth Callback Route to redirect back to our app after successfully logging in
 router.get(
@@ -32,7 +32,7 @@ router.get(
     successRedirect: "/",
     failureRedirect: "/",
   })
-);
+)
 
 // OAuth Logout Route
 router.get("/logout", function (req, res) {
@@ -41,7 +41,7 @@ router.get("/logout", function (req, res) {
       return next(err);
     }
     res.redirect("/");
-  });
-});
+  })
+})
 
 module.exports = router;
