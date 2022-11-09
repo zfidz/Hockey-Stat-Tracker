@@ -1,5 +1,5 @@
 const Team = require('../models/team')
-
+const Player = require('../models/player')
 module.exports = {
     index,
     new: newTeam,
@@ -27,6 +27,9 @@ module.exports = {
     
     function show(req,res) {
         Team.findById(req.params.id, function(err, team) {
-        res.render('teams/show', { title: 'Team Detail', team})
+            Player.find({team: team._id}, function(err, players){
+            res.render('teams/show', { title: 'Team Detail', team, players}) 
+            if(err) return res.redirect('/')   
+            })
         })
     }
