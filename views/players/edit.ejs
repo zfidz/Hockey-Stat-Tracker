@@ -1,34 +1,38 @@
-<%- include('../partials/header') %> 
+<%- include('../partials/header') %>
 
 <div id="container-lg">
-  <form id="update-form" action="/players" method="PUT">
+  <form
+    id="update-form"
+    action="/players/<%=player.id%>/?_method=PUT"
+    method="POST"
+  >
     <label>Games Played:</label>
     <input type="Number" name="gamesPlayed" required />
-    <br>
+    <br />
     <label>Points:</label>
     <input type="Number" name="points" required />
-    <br>
+    <br />
     <label>Goals:</label>
     <input type="Number" name="goals" required />
-    <br>
+    <br />
     <label>Assists:</label>
     <input type="Number" name="assists" required />
-    <br>
+    <br />
     <label>PIM:</label>
     <input type="Number" name="pim" required />
-    <br>
+    <br />
     <label>+/-</label>
     <input type="Number" name="plusMinus" required />
-    <br>
+    <br />
     <label>Current Team</label>
     <select name="team">
       <% allTeams.forEach(team => { %>
       <option value="<%= team.id %>"><%= team.name %></option>
       <% }) %>
     </select>
-    <br>
+    <br />
     <input type="submit" value="Add Player" />
   </form>
-  </div>
+</div>
 
-<%- include('../partials/footer') %> 
+<%- include('../partials/footer') %>

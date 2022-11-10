@@ -1,4 +1,5 @@
 const Player = require("../models/player");
+const team = require("../models/team");
 const Team = require("../models/team");
 
 module.exports = {
@@ -39,11 +40,15 @@ function show(req, res) {
 }
 
 function edit(req, res) {
-  Team.find({}, function (err, allTeams) {
-  res.render("players/edit", { title: "Edit Player", allTeams })
+  Player.findById(req.params.id, function(err, player) {
+   Team.find({}, function (err, allTeams) {
+  res.render("players/edit", { title: "Edit Player", allTeams, player })   
+  })
   })
 }
 
 function update(req, res) {
+  Player.updateOne({_id:req.params.id}, req.body, function(err, updatedPlayer){
+    res.redirect('/players/')  
+  })
   }
-
