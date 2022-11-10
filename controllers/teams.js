@@ -35,12 +35,9 @@ function show(req, res) {
           filter.push(player);
         }
       });
-      res.render("teams/show", {title: team.name, players:filter, team})
+      res.render("teams/show", { title: team.name, players: filter, team });
     });
   });
 }
 
-
-function deleteTeam(req, res) {
-    
-}
+function deleteTeam(req, res) {}
