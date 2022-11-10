@@ -1,4 +1,5 @@
 const Player = require("../models/player");
+
 const Team = require("../models/team");
 
 module.exports = {
@@ -54,6 +55,6 @@ function update(req, res) {
   }
 
   function deletePlayer(req,res) {
-    Player.deleteOne(Player)
+    Player.deleteOne(player)
     res.redirect("/players")
       }
