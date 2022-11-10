@@ -1,32 +1,35 @@
 <%- include('../partials/header') %>
-
+<div id="container-lg">
 <form id="new-form" action="/players" method="POST">
   <label>First Name:</label>
-  <input type="String" name="firstName" />
+  <input type="String" name="firstName" required />
   <br>
   <label>Last Name:</label>
-  <input type="String" name="lastName" />
+  <input type="String" name="lastName" required />
   <br>
   <label>Position:</label>
-  <input type="String" name="position" />
+  <input type="String" name="position" required />
+  <br>
+  <label>Jersey Number:</label>
+  <input type="Number" name="jerseyNo" required />
   <br>
   <label>Games Played:</label>
-  <input type="Number" name="gamesPlayed" />
+  <input type="Number" name="gamesPlayed" required />
   <br>
   <label>Points:</label>
-  <input type="Number" name="points" />
+  <input type="Number" name="points" required />
   <br>
   <label>Goals:</label>
-  <input type="Number" name="goals" />
+  <input type="Number" name="goals" required />
   <br>
   <label>Assists:</label>
-  <input type="Number" name="assists" />
+  <input type="Number" name="assists" required />
   <br>
   <label>PIM:</label>
-  <input type="Number" name="pim" />
+  <input type="Number" name="pim" required />
   <br>
   <label>+/-</label>
-  <input type="Number" name="plusMinus" />
+  <input type="Number" name="plusMinus" required />
   <br>
   <label>Current Team</label>
   <select name="team">
@@ -37,5 +40,5 @@
   <br>
   <input type="submit" value="Add Player" />
 </form>
-
+</div>
 <%-include('../partials/footer')%>

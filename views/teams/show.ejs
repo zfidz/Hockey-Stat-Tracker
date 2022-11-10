@@ -1,52 +1,41 @@
-<%- include('../partials/header') %> 
+<%- include('../partials/header') %>
 <div class="container-md text-center">
- <%= team.city %>
-<%= team.name %>
-<br>
-<%= team.arena %>   
+  <%= team.city %> <%= team.name %>
+  <br />
+  <%= team.arena %>
 </div>
-<br>
-<br>
+<br />
+<br />
 
 <div class="container-lg text-center">
-  <div class="row">
-    <div class="col">
-    Player
-    </div>
-    <div class="col">
-        Games Played
-</div>
-<div class="col">
-        Points
-</div>
-<div class="col">
-        Goals
-</div>
-<div class="col">
-    Assists
-</div>
-</div>    
-
-<% players.forEach(p => { %>
-    <div class="row">
-        <div class="col">
-<a href="/players/<%=p._id %>"><%= p.firstName %> <%= p.lastName %></a>       
-        </div>
-        <div class="col">
-            <%= p.gamesPlayed %> 
-        </div>
-        <div class="col">
-            <%= p.points %> 
-        </div>
-        <div class="col">
-            <%= p.goals %>
-        </div>
-        <div class="col">
-            <%= p.assists %>
-        </div>
-    </div>
+  <table class="table table-striped">
+    <thead>
+<tr>
+      <th scope="col">Jersey #:</th>
+      <th scope="col">Player</th>
+      <th scope="col">Games Played</th>
+      <th scope="col">Points</th>
+      <th scope="col">Goals</th>
+      <th scope="col">Assists</th>    
+</tr>
+    </thead>
+    <tbody>
+      <% players.forEach(p => { %>
+      <tr>
+        <th scope="row"><%= p.jerseyNo %> </th>
+        <td>
+          <a href="/players/<%=p._id %>"
+            ><%= p.firstName %> <%= p.lastName %></a
+          >
+        </td>
+        <td><%=p.gamesPlayed %></td>
+        <td><%=p.points %></td>
+        <td><%=p.goals %></td>
+        <td><%=p.assists %></td>
         <% }) %>
- </div>  
-</div>
+      </tr>
+    </tbody>
+  </table>
 
-<%- include('../partials/footer') %> 
+  <%- include('../partials/footer') %>
+</div>

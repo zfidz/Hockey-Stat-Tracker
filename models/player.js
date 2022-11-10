@@ -4,6 +4,7 @@ const Schema = mongoose.Schema;
 const playerSchema = new Schema({
   firstName: String,
   lastName: String,
+  jerseyNo: Number,
   position: String,
   gamesPlayed: Number,
   points: Number,
@@ -12,6 +13,6 @@ const playerSchema = new Schema({
   pim: Number,
   plusMinus: Number,
   team: [{ type: Schema.Types.ObjectId, ref: "Team" }],
-});
+})
 
 module.exports = mongoose.model("Player", playerSchema);
