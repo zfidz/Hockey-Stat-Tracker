@@ -7,7 +7,7 @@ module.exports = {
   show,
   delete: deleteTeam,
   edit,
-  update
+  // updateTeam
 }
 
 function index(req, res) {
@@ -53,8 +53,8 @@ res.redirect("/teams")
     })
   }
 
-  function update(req, res) {
-    Team.updateOne({_id:req.params.id}, req.body, function(err, updatedTeam){
-      res.redirect('/teams/')  
-    })
-    }
+  // function updateTeam(req, res) {
+  //   Team.updateOne({_id:req.params.id}, req.body, function(err, updatedTeam){
+  //     res.redirect('/teams/')  
+  //   })
+  //   }

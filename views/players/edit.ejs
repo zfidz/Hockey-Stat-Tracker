@@ -1,50 +1,41 @@
 <%- include('../partials/header') %>
 
-<div id="container-lg">
+<!-- <div id="container-lg">
   <form
-    id="update-form"
-    action="/players/<%=player.id%>/?_method=PUT"
-    method="POST"
-  >
+    id="update-form" action="/players/<%#=player.id%>/?_method=PUT" method="POST">
     <label>Games Played:</label>
     <br />
-   <input name="gamesPlayed class="form-control form-control-lg" type="Number" value="<%=player.gamesPlayed%>" aria-label=".form-control-lg example">
+   <input name="gamesPlayed class="form-control form-control-lg" type="Number" value="<%#=player.gamesPlayed%>" aria-label=".form-control-lg example">
     <br />
-
     <label>Points:</label>
     <br />
-    <input name="points class="form-control form-control-lg" type="Number" value="<%=player.points%>" aria-label=".form-control-lg example">
+    <input name="points class="form-control form-control-lg" type="Number" value="<%#=player.points%>" aria-label=".form-control-lg example">
      <br />
-
      <label>Goals:</label>
      <br />
-     <input name="goals class="form-control form-control-lg" type="Number" value="<%=player.goals%>" aria-label=".form-control-lg example">
+     <input name="goals class="form-control form-control-lg" type="Number" value="<%#=player.goals%>" aria-label=".form-control-lg example">
       <br />
-
       <label>Assists:</label>
       <br />
-      <input name="assists class="form-control form-control-lg" type="Number" value="<%=player.assists%>" aria-label=".form-control-lg example">
+      <input name="assists class="form-control form-control-lg" type="Number" value="<%#=player.assists%>" aria-label=".form-control-lg example">
        <br />
-
        <label>pim:</label>
        <br />
-       <input name="pim class="form-control form-control-lg" type="Number" value="<%=player.pim%>" aria-label=".form-control-lg example">
+       <input name="pim class="form-control form-control-lg" type="Number" value="<%#=player.pim%>" aria-label=".form-control-lg example">
         <br />
-
         <label>plusMinus:</label>
         <br />
-        <input name="plusMinus class="form-control form-control-lg" type="Number" value="<%=player.plusMinus%>" aria-label=".form-control-lg example">
+        <input name="plusMinus class="form-control form-control-lg" type="Number" value="<%#=player.plusMinus%>" aria-label=".form-control-lg example">
          <br />
-         
     <label>Current Team</label>
     <select name="team">
-      <% allTeams.forEach(team => { %>
-      <option value="<%= team.id %>"><%= team.name %></option>
-      <% }) %>
+      <%# allTeams.forEach(team => { %>
+      <option value="<%#= team.id %>"><%#= team.name %></option>
+      <%# }) %>
     </select>
     <br />
     <input type="submit" value="Add Player" />
   </form>
-</div>
+</div> -->
 
 <%- include('../partials/footer') %>

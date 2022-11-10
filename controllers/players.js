@@ -8,7 +8,7 @@ module.exports = {
   show,
   index,
   edit,
-  update,
+  updatePlayer,
   delete: deletePlayer
 }
 
@@ -48,7 +48,7 @@ function edit(req, res) {
   })
 }
 
-function update(req, res) {
+function updatePlayer(req, res) {
   Player.updateOne({_id:req.params.id}, req.body, function(err, updatedPlayer){
     res.redirect('/players/')  
   })
