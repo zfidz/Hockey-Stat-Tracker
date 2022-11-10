@@ -1,22 +1,30 @@
 <%- include('../partials/header') %>
-
+<div class="container-md"
 <form id="new-form" action="/teams" method="POST">
   <label>Team:</label>
   <input type="String" name="name" />
+  <br>
   <label>City:</label>
   <input type="String" name="city" />
+  <br>
   <label>Arena:</label>
   <input type="String" name="arena" />
+  <br>
   <label>Year Established:</label>
   <input type="Number" name="year" />
+  <br>
   <label>Stanley Cups:</label>
   <input type="Number" name="cups" />
+  <br>
   <label>Games Played:</label>
   <input type="Number" name="gamesPlayed" />
+  <br>
   <label>Wins:</label>
   <input type="Number" name="wins" />
+  <br>
   <label>Losses:</label>
   <input type="Number" name="losses" />
+  <br>
   <input type="submit" value="Add Team" />
 </form>
 

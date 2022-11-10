@@ -3,28 +3,38 @@
 <form id="new-form" action="/players" method="POST">
   <label>First Name:</label>
   <input type="String" name="firstName" />
+  <br>
   <label>Last Name:</label>
   <input type="String" name="lastName" />
+  <br>
   <label>Position:</label>
   <input type="String" name="position" />
+  <br>
   <label>Games Played:</label>
   <input type="Number" name="gamesPlayed" />
+  <br>
   <label>Points:</label>
   <input type="Number" name="points" />
+  <br>
   <label>Goals:</label>
   <input type="Number" name="goals" />
+  <br>
   <label>Assists:</label>
   <input type="Number" name="assists" />
+  <br>
   <label>PIM:</label>
   <input type="Number" name="pim" />
+  <br>
   <label>+/-</label>
   <input type="Number" name="plusMinus" />
+  <br>
   <label>Current Team</label>
   <select name="team">
     <% allTeams.forEach(team => { %>
     <option value="<%= team.id %>"><%= team.name %></option>
     <% }) %>
   </select>
+  <br>
   <input type="submit" value="Add Player" />
 </form>
 
