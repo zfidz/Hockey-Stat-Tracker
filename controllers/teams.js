@@ -1,5 +1,6 @@
 const Team = require("../models/team");
 const Player = require("../models/player");
+const team = require("../models/team");
 module.exports = {
   index,
   new: newTeam,
@@ -40,9 +41,13 @@ function show(req, res) {
   })
 }
 
-function deleteTeam(req, res) {
-  Team.findOne({'_id':req.params.id}).then(function(team){
-    team.remove()
-    res.redirect("/teams")
-  })
-}
+// function deleteTeam(req, res) {
+//   Team.findOne({'_id':req.params.id}).then((team) => {
+//     team.remove()
+//     res.redirect("/teams")
+//   })
+// }
+function deleteTeam(req,res) {
+Team.findByIdAndDelete({'_id':req.params.id})
+res.redirect("/teams")
+  }

@@ -1,0 +1,34 @@
+<%- include('../partials/header') %> 
+
+<div id="container-lg">
+  <form id="update-form" action="/players" method="PUT">
+    <label>Games Played:</label>
+    <input type="Number" name="gamesPlayed" required />
+    <br>
+    <label>Points:</label>
+    <input type="Number" name="points" required />
+    <br>
+    <label>Goals:</label>
+    <input type="Number" name="goals" required />
+    <br>
+    <label>Assists:</label>
+    <input type="Number" name="assists" required />
+    <br>
+    <label>PIM:</label>
+    <input type="Number" name="pim" required />
+    <br>
+    <label>+/-</label>
+    <input type="Number" name="plusMinus" required />
+    <br>
+    <label>Current Team</label>
+    <select name="team">
+      <% allTeams.forEach(team => { %>
+      <option value="<%= team.id %>"><%= team.name %></option>
+      <% }) %>
+    </select>
+    <br>
+    <input type="submit" value="Add Player" />
+  </form>
+  </div>
+
+<%- include('../partials/footer') %> 

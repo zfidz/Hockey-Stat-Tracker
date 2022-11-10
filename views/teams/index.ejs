@@ -12,7 +12,7 @@
   </tr>
       </thead>
       <tbody>
-        <% teams.forEach(p => { %>
+        <% teams.forEach(t => { %>
         <tr>
         <td>    <form action="/teams/<%= t.id %>?_method=DELETE" method="POST">
         <button type="submit">X</button>
