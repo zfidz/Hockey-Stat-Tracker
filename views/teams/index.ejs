@@ -8,18 +8,23 @@
         <th scope="col">Team:</th>
         <th scope="col">Games Played</th>
         <th scope="col">Wins</th>
-        <th scope="col">Losses</th>    
+        <th scope="col">Losses</th> 
+        <th scope="col">O.T Losses:</th>   
   </tr>
       </thead>
       <tbody>
         <% teams.forEach(t => { %>
         <tr>
-        <td>    <form action="/teams/<%= t.id %>?_method=DELETE" method="POST">
-        <button type="submit">X</button>
-    </form> <a href="/teams/<%=t._id %>"> <%= t.city %> <%= t.name %></a></td>
+        <td>    
+    <a href="/teams/<%=t._id %>"><%= t.city %> <%= t.name %></a>
+    </form> </td>
         <td><%= t.gamesPlayed %></td>
         <td><%= t.wins %></td>
         <td><%= t.losses %></td>
+        <td><%=t.otl%></td>    
+        <td><form action="/teams/<%= t.id %>?_method=DELETE" method="POST">
+        <button type="submit">REMOVE</button></td>
+        <a href="/teams/<%=t._id%>/edit">Update</a>
         <% }) %> 
         </tr>
       </tbody>

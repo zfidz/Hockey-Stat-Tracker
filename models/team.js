@@ -7,9 +7,11 @@ const teamSchema = new Schema({
   arena: String,
   year: Date,
   cups: Number,
+  points: Number,
   gamesPlayed: Number,
   wins: Number,
   losses: Number,
+  otl: Number
 });
 
 

@@ -8,4 +8,5 @@ router.post('/', playersCtrl.create)
 router.get('/:id', playersCtrl.show)
 router.get('/:id/edit', playersCtrl.edit)
 router.put('/:id', playersCtrl.update)
+router.delete('/:id', playersCtrl.delete)
 module.exports = router

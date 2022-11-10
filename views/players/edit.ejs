@@ -7,23 +7,35 @@
     method="POST"
   >
     <label>Games Played:</label>
-    <input type="Number" name="gamesPlayed" required />
     <br />
+   <input name="gamesPlayed class="form-control form-control-lg" type="Number" value="<%=player.gamesPlayed%>" aria-label=".form-control-lg example">
+    <br />
+
     <label>Points:</label>
-    <input type="Number" name="points" required />
     <br />
-    <label>Goals:</label>
-    <input type="Number" name="goals" required />
-    <br />
-    <label>Assists:</label>
-    <input type="Number" name="assists" required />
-    <br />
-    <label>PIM:</label>
-    <input type="Number" name="pim" required />
-    <br />
-    <label>+/-</label>
-    <input type="Number" name="plusMinus" required />
-    <br />
+    <input name="points class="form-control form-control-lg" type="Number" value="<%=player.points%>" aria-label=".form-control-lg example">
+     <br />
+
+     <label>Goals:</label>
+     <br />
+     <input name="goals class="form-control form-control-lg" type="Number" value="<%=player.goals%>" aria-label=".form-control-lg example">
+      <br />
+
+      <label>Assists:</label>
+      <br />
+      <input name="assists class="form-control form-control-lg" type="Number" value="<%=player.assists%>" aria-label=".form-control-lg example">
+       <br />
+
+       <label>pim:</label>
+       <br />
+       <input name="pim class="form-control form-control-lg" type="Number" value="<%=player.pim%>" aria-label=".form-control-lg example">
+        <br />
+
+        <label>plusMinus:</label>
+        <br />
+        <input name="plusMinus class="form-control form-control-lg" type="Number" value="<%=player.plusMinus%>" aria-label=".form-control-lg example">
+         <br />
+         
     <label>Current Team</label>
     <select name="team">
       <% allTeams.forEach(team => { %>

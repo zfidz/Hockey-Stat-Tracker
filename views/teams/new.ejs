@@ -1,30 +1,48 @@
 <%- include('../partials/header') %>
-<div class="container-lg">
+<div class="container-sm vertical-center" >
+
 <form id="new-form" action="/teams" method="POST">
-  <label>Team:</label>
-  <input type="String" name="name" required />
-  <br>
-  <label>City:</label>
-  <input type="String" name="city" required />
-  <br>
-  <label>Arena:</label>
-  <input type="String" name="arena" required />
-  <br>
-  <label>Year Established:</label>
-  <input type="Number" name="year" required />
-  <br>
-  <label>Stanley Cups:</label>
-  <input type="Number" name="cups" required />
-  <br>
-  <label>Games Played:</label>
-  <input type="Number" name="gamesPlayed" required />
-  <br>
-  <label>Wins:</label>
-  <input type="Number" name="wins" required />
-  <br>
-  <label>Losses:</label>
-  <input type="Number" name="losses" required />
-  <br>
+     <label>City:</label>
+   <br />
+
+  <input name="city" class="form-control form-control-lg" type="String" autocomplete="off" aria-label=".form-control-lg example">
+   <br />
+   <label>Name:</label>
+  <br />
+   <input name="name" class="form-control form-control-lg" type="String" autocomplete="off" aria-label=".form-control-lg example">
+    <br />
+    <label>Arena</label>
+    <br />
+    <input name="arena" class="form-control form-control-lg" type="String" autocomplete="off" aria-label=".form-control-lg example">
+     <br />
+     <label>Year Established:</label>
+     <br />
+     <input name="year" class="form-control form-control-lg" type="Number" autocomplete="off" aria-label=".form-control-lg example">
+      <br />
+      <label>Stanley Cups:</label>
+      <br />
+      <input name="cups" class="form-control form-control-lg" type="Number" autocomplete="off" aria-label=".form-control-lg example">
+       <br />
+       <label>Points:</label>
+      <br />
+      <input name="points" class="form-control form-control-lg" type="Number" autocomplete="off" aria-label=".form-control-lg example">
+       <br />
+       <label>Games Played:</label>
+       <br />
+       <input name="gamesPlayed" class="form-control form-control-lg" type="Number" autocomplete="off" aria-label=".form-control-lg example">
+        <br />
+        <label>Wins:</label>
+        <br />
+        <input name="wins" class="form-control form-control-lg" type="Number" autocomplete="off" aria-label=".form-control-lg example">
+         <br />
+         <label>Losses</label>
+         <br />
+         <input name="losses" class="form-control form-control-lg" type="Number" autocomplete="off" aria-label=".form-control-lg example">
+          <br />
+  <label>Overtime Losses</label>
+  <br />
+  <input name="otl" class="form-control form-control-lg" type="Number" aria-label=".form-control-lg example">
+   <br />
   <input type="submit" value="Add Team"/>
 </form>
 </div>

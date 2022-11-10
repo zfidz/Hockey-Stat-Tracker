@@ -1,0 +1,33 @@
+<%- include('../partials/header') %>
+
+<div id="container-lg">
+  <form id="update-form" action="/teams/<%=team.id%>/?_method=PUT" method="POST">
+    <label>Games Played:</label>
+    <br />
+   <input name="gamesPlayed class="form-control form-control-lg" type="Number" value="<%=team.gamesPlayed%>" aria-label=".form-control-lg example">
+    <br />
+
+    <label>Points:</label>
+    <br />
+    <input name="points class="form-control form-control-lg" type="Number" value="<%=team.points%>" aria-label=".form-control-lg example">
+     <br />
+
+     <label>Wins:</label>
+     <br />
+     <input name="goals class="form-control form-control-lg" type="Number" value="<%=team.wins%>" aria-label=".form-control-lg example">
+      <br />
+
+      <label>Losses:</label>
+      <br />
+      <input name="assists class="form-control form-control-lg" type="Number" value="<%=team.losses%>" aria-label=".form-control-lg example">
+       <br />
+
+       <label>Overtime Losses:</label>
+       <br />
+       <input name="pim class="form-control form-control-lg" type="Number" value="<%=team.otl%>" aria-label=".form-control-lg example">
+        <br />
+    <input type="submit" value="Update Stats" />
+  </form>
+</div>
+
+<%- include('../partials/footer') %>

@@ -39,5 +39,7 @@
             <%= p.assists %>
         </div>
     </div>
+    <td><form action="/players/<%= p.id %>?_method=DELETE" method="POST">
+        <button type="submit">REMOVE</button></td>
         <% }) %>
 <%- include('../partials/footer') %> 

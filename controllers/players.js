@@ -1,5 +1,4 @@
 const Player = require("../models/player");
-const team = require("../models/team");
 const Team = require("../models/team");
 
 module.exports = {
@@ -8,27 +7,28 @@ module.exports = {
   show,
   index,
   edit,
-  update
-};
+  update,
+  delete: deletePlayer
+}
 
 function index(req, res) {
   Player.find({}, function (err, players) {
     res.render("players/index", { title: "All Players", players });
-  });
+  })
 }
 
 function create(req, res) {
-  const player = new Player(req.body);
-  player.team.push(req.body.team);
+  const player = new Player(req.body)
+  player.team.push(req.body.team)
   player.save(function (err) {
-    if (err) return res.redirect(`/players/new`);
-    res.redirect("/players");
-  });
+    if (err) return res.redirect(`/players/new`)
+    res.redirect("/players")
+  })
 }
 
 function newPlayer(req, res) {
   Team.find({}, function (err, allTeams) {
-    res.render("players/new", { title: "New Player", allTeams });
+    res.render("players/new", { title: "New Player", allTeams })
   });
 }
 
@@ -52,3 +52,8 @@ function update(req, res) {
     res.redirect('/players/')  
   })
   }
+
+  function deletePlayer(req,res) {
+    Player.deleteOne(Player)
+    res.redirect("/players")
+      }

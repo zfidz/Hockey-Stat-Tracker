@@ -1,12 +1,13 @@
 const Team = require("../models/team");
 const Player = require("../models/player");
-const team = require("../models/team");
 module.exports = {
   index,
   new: newTeam,
   create,
   show,
   delete: deleteTeam,
+  edit,
+  update
 }
 
 function index(req, res) {
@@ -42,6 +43,18 @@ function show(req, res) {
 }
 
 function deleteTeam(req,res) {
-Team.deleteOne(team)
+Team.deleteOne(Team)
 res.redirect("/teams")
   }
+
+  function edit(req, res) {
+    Team.findById(req.params.id, function(err, team) {
+    res.render("teams/edit", { title: "Edit Team", team })
+    })
+  }
+
+  function update(req, res) {
+    Team.updateOne({_id:req.params.id}, req.body, function(err, updatedTeam){
+      res.redirect('/teams/')  
+    })
+    }
