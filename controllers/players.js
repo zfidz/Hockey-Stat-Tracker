@@ -1,4 +1,3 @@
-const { Template } = require('ejs')
 const Player = require('../models/player')
 const Team = require('../models/team')
 
