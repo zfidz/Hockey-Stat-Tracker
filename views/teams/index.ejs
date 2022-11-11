@@ -1,7 +1,7 @@
 <%- include('../partials/header') %> 
 
 
-<div class="container-lg text-center">
+<div class="container-sm text-center">
     <table class="table table-striped">
       <thead>
   <tr>
@@ -24,11 +24,12 @@
         <td><%=t.otl%></td>    
         <td><form action="/teams/<%= t.id %>?_method=DELETE" method="POST">
         <button type="submit">REMOVE</button></td>
-        <a href="/teams/<%=t._id%>/edit">Update</a>
+        <td><button><a href="/teams/<%=t._id%>/edit">Update</a></button></td>
         <% }) %> 
         </tr>
       </tbody>
     </table>
+    </div>
 
 
 <%- include('../partials/footer') %> 
