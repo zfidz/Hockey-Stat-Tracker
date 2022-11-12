@@ -11,8 +11,8 @@ const teamSchema = new Schema({
   gamesPlayed: Number,
   wins: Number,
   losses: Number,
-  otl: Number
+  otl: Number,
+  logo: String
 });
-
 
 module.exports = mongoose.model("Team", teamSchema);

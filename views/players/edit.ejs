@@ -4,26 +4,37 @@
   <form
     id="update-form"
     action="/players/<%=player.id%>/?_method=PUT"
-    method="POST"
-  >
+    method="POST">
+
     <label>Games Played:</label>
-    <input type="Number" name="gamesPlayed" class="form-control form-control-lg" value="<%=player.gamesPlayed%>" required />
+    <div class="col-3">
+    <input type="Number" name="gamesPlayed" class="form-control text-center form-control-lg" value="<%=player.gamesPlayed%>" required />
     <br />
+    </div>
     <label>Points:</label>
-    <input type="Number" name="points" class="form-control form-control-lg" value="<%=player.points%>" required />
+    <div class="col-3">
+    <input type="Number" name="points" class="form-control text-center form-control-lg" value="<%=player.points%>" required />
     <br />
+    </div>
     <label>Goals:</label>
-    <input type="Number" name="goals" class="form-control form-control-lg" value="<%=player.goals%>" required />
+    <div class="col-3">
+    <input type="Number" name="goals" class="form-control text-center form-control-lg" value="<%=player.goals%>" required />
     <br />
+    </div>
     <label>Assists:</label>
-    <input type="Number" name="assists" class="form-control form-control-lg" value="<%=player.assists%>" required />
+    <div class="col-3">
+    <input type="Number" name="assists" class="form-control text-center form-control-lg" value="<%=player.assists%>" required />
     <br />
+    </div>
     <label>PIM:</label>
-    <input type="Number" name="pim" class="form-control form-control-lg" value="<%=player.pim%>" required />
+    <div class="col-3">
+    <input type="Number" name="pim" class="form-control text-center form-control-lg" value="<%=player.pim%>" required />
     <br />
+    </div>
     <label>+/-</label>
-    <input type="Number" name="plusMinus" class="form-control form-control-lg" value="<%=player.plusMinus%>" required />
-    <br />
+    <div class="col-3">
+    <input type="Number" name="plusMinus" class="form-control text-center form-control-lg" value="<%=player.plusMinus%>" required />
+    </div><br />
     <label>Current Team</label>
     <select name="team">
       <% allTeams.forEach(team => { %>

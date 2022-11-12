@@ -6,25 +6,35 @@ action="/teams/<%=team.id%>/?_method=PUT"
 method="POST"
 >
     <label>Games Played:</label>
+        <div class="col-3"></div>
     <br />
    <input name="gamesPlayed" class="form-control form-control-lg" type="Number" value="<%=team.gamesPlayed%>" aria-label=".form-control-lg example">
-    <br />
+    </div><br />
     <label>Points:</label>
+        <div class="col-3"></div>
     <br />
     <input name="points" class="form-control form-control-lg" type="Number" value="<%=team.points%>" aria-label=".form-control-lg example">
-     <br />
+     </div><br />
      <label>Wins:</label>
+         <div class="col-3"></div>
      <br />
      <input name="wins" class="form-control form-control-lg" type="Number" value="<%=team.wins%>" aria-label=".form-control-lg example">
-      <br />
+      </div><br />
       <label>Losses:</label>
+          <div class="col-3"></div>
       <br />
       <input name="losses" class="form-control form-control-lg" type="Number" value="<%=team.losses%>" aria-label=".form-control-lg example">
-       <br />
+       </div><br />
        <label>Overtime Losses:</label>
+           <div class="col-3"></div>
        <br />
        <input name="pim" class="form-control form-control-lg" type="Number" value="<%=team.otl%>" aria-label=".form-control-lg example">
-        <br />
+        </div><br />
+        <div class="col-3"></div>
+    <label>Logo URL:</label>
+    <div class="col-3">
+    <input type="String" name="logo" class="form-control text-center form-control-lg" value="<%=team.logoURL%>" required />
+    </div><br />
     <input type="submit" value="Update Stats" />
   </form>
 

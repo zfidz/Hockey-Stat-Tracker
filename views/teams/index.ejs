@@ -1,35 +1,57 @@
 <%- include('../partials/header') %> 
 
+<div class="container-sm text-center col-5">
 
-<div class="container-sm text-center">
+
     <table class="table table-striped">
       <thead>
-  <tr>
-        <th scope="col">Team:</th>
+  <tr>  
+   
+        <th style= "text-align:left" scope="col">Team:</th>
         <th scope="col">Games Played</th>
         <th scope="col">Wins</th>
         <th scope="col">Losses</th> 
         <th scope="col">O.T Losses:</th>   
+
   </tr>
       </thead>
       <tbody>
         <% teams.forEach(t => { %>
         <tr>
-        <td>    
-    <a href="/teams/<%=t._id %>"><%= t.city %> <%= t.name %></a>
-    </form> </td>
+<div class="team-name-logo">
+        <td style= "text-align:left">
+        <a href="/teams/<%=t._id %>" style ="text-decoration: none; color: inherit"><img height="50px" src=<%=t.logo%>> <%= t.city %> <%= t.name %></a>
+</td>
+</div>
         <td><%= t.gamesPlayed %></td>
         <td><%= t.wins %></td>
         <td><%= t.losses %></td>
-        <td><%=t.otl%></td>    
-        <td><form action="/teams/<%= t.id %>?_method=DELETE" method="POST">
-        <button type="submit">REMOVE</button></td>
-        <td><button><a href="/teams/<%=t._id%>/edit">Update</a></button></td>
+        <td><%=t.otl%></td>     
+         <td><button type="button" class ="btn btn-secondary btn-sm"  ><a href="/teams/<%=t._id%>/edit" style ="text-decoration: none; color: inherit">Update</a></button></td>
+        <td><button class ="btn btn-danger btn-sm" onclick="document.getElementById('id01').style.display='block'">Delete</button></td>
+<div id="id01" class="modal">
+  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+  <form class="modal-content" action="/action_page.php">
+    <div class="container">
+      <h1>Delete Team</h1>
+      <p>Are you sure you want to delete <%=t.city%> <%=t.name%>?</p>
+      <div class="clearfix">
+        <button type="button" class ="btn btn-secondary btn-sm"><a href="/teams" style ="text-decoration: none; color: inherit">Cancel</a></button>
+        <form action="/teams/<%=t.id%>?_method=DELETE" method="POST">
+          <button type="submit" class ="btn btn-danger btn-sm">REMOVE</button>
+          </form>
+      </div>
+    </div>
+  </form>
+</div>
+</tr>
         <% }) %> 
-        </tr>
       </tbody>
     </table>
-    </div>
 
+
+
+
+    </div>
 
 <%- include('../partials/footer') %> 

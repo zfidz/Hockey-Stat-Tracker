@@ -1,45 +1,54 @@
 <%- include('../partials/header') %> 
 
 
-<div class="container text-center"></div>
-<div class="row">
-<div class="col">
-      Name 
-</div>
- 
-<div class="col">
-        Games Played
-</div>
-<div class="col">
-        Points
-</div>
-<div class="col">
-        Goals
-</div>
-<div class="col">
-    Assists
-</div>
-</div>
-</div>
-<% players.forEach(p => { %>
-    <div class="row">
-        <div class="col">
-<a href="/players/<%=p._id %>"><%= p.firstName %> <%= p.lastName %></a>       
-        </div>
-        <div class="col">
-            <%= p.gamesPlayed %> 
-        </div>
-        <div class="col">
-            <%= p.points %> 
-        </div>
-        <div class="col">
-            <%= p.goals %>
-        </div>
-        <div class="col">
-            <%= p.assists %>
-        </div>
+<div class="container-sm text-center col-5">
+    <table class="table table-striped sortable">
+      <thead>
+  <tr>
+        <th scope="col">Name:</th>
+        <th scope="col">Games Played:</th>
+        <th scope="col">Points</th>
+        <th scope="col">Goals</th> 
+        <th scope="col">Assists</th>   
+  </tr>
+      </thead>
+      <tbody>
+        <% players.forEach(p => { %>
+        <tr>
+        <td>    
+    <a href="/players/<%=p._id %>" style ="text-decoration: none; color: inherit"><%= p.firstName %> <%= p.lastName %></a>
+    </form> </td>
+        <td><%= p.gamesPlayed %></td>
+        <td><%= p.points %></td>
+        <td><%= p.goals %></td>
+        <td><%=p.assists%></td>     
+         <td><button type="button" class ="btn btn-secondary btn-sm"  ><a href="/players/<%=p._id%>/edit" style ="text-decoration: none; color: inherit">Update</a></button></td>
+        <td><button class ="btn btn-danger btn-sm" onclick="document.getElementById('id01').style.display='block'">Delete</button></td>
+<div id="id01" class="modal">
+  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+  <form class="modal-content" action="/action_page.php">
+    <div class="container">
+      <h1>Delete Team</h1>
+      <p>Are you sure you want to delete <%=p.firstName%> <%=p.lastName%>?</p>
+      <div class="clearfix">
+        <button type="button" class ="btn btn-secondary btn-sm"><a href="/teams" style ="text-decoration: none; color: inherit">Cancel</a></button>
+        <form action="/players/<%=p.id%>?_method=DELETE" method="POST">
+          <button type="submit" class ="btn btn-danger btn-sm">REMOVE</button>
+          </form>
+      </div>
     </div>
-    <td><form action="/players/<%= p.id %>?_method=DELETE" method="POST">
-        <button type="submit">REMOVE</button></td>
-        <% }) %>
+  </form>
+</div>
+<% }) %> 
+         </tr>
+       </tbody>
+     </table>
+</div>
+
+
 <%- include('../partials/footer') %> 
+
+
+
+
+
