@@ -43,9 +43,10 @@ function show(req, res) {
 }
 
 function deleteTeam(req,res) {
-Team.deleteOne(Team)
-res.redirect("/teams")
-  }
+  Team.findByIdAndDelete(req.params.id , function(err, team)  { 
+  res.redirect("/teams")  
+  })
+    }
 
   function edit(req, res) {
     Team.findById(req.params.id, function(err, team) {

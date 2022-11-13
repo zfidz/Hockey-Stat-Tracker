@@ -1,13 +1,13 @@
 <%- include('../partials/header') %>
 <div class="container-md text-center">
-  <%= team.city %> <%= team.name %>
+  <img height="200px" src=<%=team.logo%>>
+  <p class='show-title'><%= team.city %> <%= team.name %></p>
   <br />
-  <%= team.arena %>
+  <p class='show-sub'><%= team.arena %></p>
 </div>
 <br />
 <br />
-
-<div class="container-lg text-center">
+<div class="container-lg text-center col-5">
   <table class="table table-striped">
     <thead>
 <tr>
@@ -25,8 +25,7 @@
         <th scope="row"><%= p.jerseyNo %> </th>
         <td>
           <a href="/players/<%=p._id %>"
-            ><%= p.firstName %> <%= p.lastName %></a
-          >
+            ><%= p.firstName %> <%= p.lastName %></a>
         </td>
         <td><%=p.gamesPlayed %></td>
         <td><%=p.points %></td>
@@ -36,6 +35,5 @@
       </tr>
     </tbody>
   </table>
-
-  <%- include('../partials/footer') %>
+<%- include('../partials/footer') %>
 </div>

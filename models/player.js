@@ -13,6 +13,7 @@ const playerSchema = new Schema({
   pim: Number,
   plusMinus: Number,
   team: [{ type: Schema.Types.ObjectId, ref: "Team" }],
+  playerPic: String
 })
 
 module.exports = mongoose.model("Player", playerSchema);

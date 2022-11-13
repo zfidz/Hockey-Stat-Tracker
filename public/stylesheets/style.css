@@ -1,6 +1,19 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-image: url(../pictures/wp8796152-hockey-rink-wallpapers.jpg);
+  min-height: 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+#new-form{
+width: 400px;
+  background-color: #79797971;
+  border: solid;
+  border-radius: 30px;
+  border-color: black;
 }
 
 a {
@@ -9,4 +22,22 @@ a {
 
 .team-name-logo {
   text-align: left;
+}
+
+.show-header {
+  font-size: 70px;
+}
+
+.show-sub {
+  font-size: 50px;
+}
+
+.main-stats {
+  font-size: 30px;
+}
+
+.headshot {
+  border-style: solid;
+  border-color: black;
+  border-radius: 50%;
 }

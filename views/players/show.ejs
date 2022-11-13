@@ -1,5 +1,11 @@
 <%- include('../partials/header') %> 
-<%= player.firstName %> 
-<%= player.lastName%> 
-<a href="/players/<%=player._id%>/edit">Update</a>
+
+<div class="container-md text-center">
+<img class="headshot" src=<%=player.playerPic%>>
+<p class='show-header'><%= player.firstName %> <%= player.lastName%>  |  #<%= player.jerseyNo %> </p>
+<p class='show-sub'>Position: <%= player.position %></p>
+<p class="main-stats">Games Played: <%=player.gamesPlayed%>  |  Goals:<%=player.goals%>  |  Assists:<%= player.assists %>  |  Points: <%= player.points %>  </p>
+<p class="sub-stats"></p>
+</div>
+
 <%-include('../partials/footer')%>

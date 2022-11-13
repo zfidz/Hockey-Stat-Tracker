@@ -55,6 +55,7 @@ function updatePlayer(req, res) {
   }
 
   function deletePlayer(req,res) {
-    Player.deleteOne(Player)
-    res.redirect("/players")
+    Player.findByIdAndDelete(req.params.id , function(err, player)  { 
+    res.redirect("/players")  
+    })
       }

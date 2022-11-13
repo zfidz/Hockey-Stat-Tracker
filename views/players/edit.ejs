@@ -35,13 +35,19 @@
     <div class="col-3">
     <input type="Number" name="plusMinus" class="form-control text-center form-control-lg" value="<%=player.plusMinus%>" required />
     </div><br />
+    <label>Player Pic URL:</label>
+    <br />
+    <div class="col-3">
+    <input name="playerPic" class="form-control form-control-lg" type="String" autocomplete="off" aria-label=".form-control-lg">
+     <br /></div>
     <label>Current Team</label>
+    <div class="col-3">
     <select name="team">
       <% allTeams.forEach(team => { %>
       <option value="<%= team.id %>"><%= team.name %></option>
       <% }) %>
     </select>
-    <br />
+    <br /></div>
     <input type="submit" value="Add Player" />
   </form>
 </div>
