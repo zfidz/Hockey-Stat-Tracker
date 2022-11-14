@@ -1,68 +1,124 @@
 <%- include('../partials/header') %>
-<div id="container-lg col-2 text-center">
-<form id="new-form" action="/players" method="POST">
-<label>First Name:</label>
-<br />
-<input name="firstName" class="form-control form-control-lg" type="String" autocomplete="off" aria-label=".form-control-lg ">
-<br />
-<label>Last Name:</label>
-<br />
-<input name="lastName" class="form-control form-control-lg" type="String" autocomplete="off" aria-label=".form-control-lg ">
- <br />
- <label>Position:</label>
- <br />
- <input name="position" class="form-control form-control-lg" type="String" autocomplete="off" aria-label=".form-control-lg ">
-  <br />
-  <label>Jersey Number:</label>
-  <br />
-  <input name="jerseyNo" class="form-control form-control-lg" type="Number" autocomplete="off" aria-label=".form-control-lg ">
-   <br />
-   <label>Games Played:</label>
-   <br />
-   <input name="gamesPlayed" class="form-control form-control-lg" type="Number" autocomplete="off" aria-label=".form-control-lg">
+<p class="show-header text-center">New Player</p>
+<div class="d-flex align-items-center justify-content-center text-center">
+  <form id="form" action="/players" method="POST">
+    <label>First Name:</label>
+    <br />
+    <input
+      name="firstName"
+      class="form-control form-control-md"
+      type="String"
+      autocomplete="off"
+      aria-label=".form-control-lg "
+    />
+    <br />
+    <label>Last Name:</label>
+    <br />
+    <input
+      name="lastName"
+      class="form-control form-control-md"
+      type="String"
+      autocomplete="off"
+      aria-label=".form-control-lg "
+    />
+    <br />
+    <label>Position:</label>
+    <br />
+    <input
+      name="position"
+      class="form-control form-control-md"
+      type="String"
+      autocomplete="off"
+      aria-label=".form-control-lg "
+    />
+    <br />
+    <label>Jersey Number:</label>
+    <br />
+    <input
+      name="jerseyNo"
+      class="form-control form-control-md"
+      type="Number"
+      autocomplete="off"
+      aria-label=".form-control-lg "
+    />
+    <br />
+    <label>Games Played:</label>
+    <br />
+    <input
+      name="gamesPlayed"
+      class="form-control form-control-md"
+      type="Number"
+      autocomplete="off"
+      aria-label=".form-control-lg"
+    />
     <br />
     <label>Points:</label>
-   <br />
-   <input name="points" class="form-control form-control-lg" type="Number" autocomplete="off" aria-label=".form-control-lg">
+    <br />
+    <input
+      name="points"
+      class="form-control form-control-md"
+      type="Number"
+      autocomplete="off"
+      aria-label=".form-control-lg"
+    />
     <br />
     <label>Goals:</label>
     <br />
-    <input name="goals" class="form-control form-control-lg" type="Number" autocomplete="off" aria-label=".form-control-lg">
-     <br />
-     <label>Assists:</label>
-     <br />
-     <input name="assists" class="form-control form-control-lg" type="Number" autocomplete="off" aria-label=".form-control-lg">
-      <br />
-      <label>PIM:</label>
-      <br />
-      <input name="pim" class="form-control form-control-lg" type="Number" autocomplete="off" aria-label=".form-control-lg">
-       <br />
-       <label>+/-:</label>
-       <br />
-       <input name="plusMinus" class="form-control form-control-lg" type="Number" autocomplete="off" aria-label=".form-control-lg">
-        <br />
-        <label>Player Pic URL:</label>
-        <br />
-        <input name="playerPic" class="form-control form-control-lg" type="String" autocomplete="off" aria-label=".form-control-lg">
-         <br />
-        <select name="team">
-          <% allTeams.forEach(team => { %>
-          <option value="<%= team.id %>"><%= team.name %></option>
-          <% }) %>
-        </select>
-  <input type="submit" value="Add Player" />
-</form>
-
+    <input
+      name="goals"
+      class="form-control form-control-md"
+      type="Number"
+      autocomplete="off"
+      aria-label=".form-control-lg"
+    />
+    <br />
+    <label>Assists:</label>
+    <br />
+    <input
+      name="assists"
+      class="form-control form-control-md"
+      type="Number"
+      autocomplete="off"
+      aria-label=".form-control-lg"
+    />
+    <br />
+    <label>PIM:</label>
+    <br />
+    <input
+      name="pim"
+      class="form-control form-control-md"
+      type="Number"
+      autocomplete="off"
+      aria-label=".form-control-lg"
+    />
+    <br />
+    <label>+/-:</label>
+    <br />
+    <input
+      name="plusMinus"
+      class="form-control form-control-md"
+      type="Number"
+      autocomplete="off"
+      aria-label=".form-control-lg"
+    />
+    <br />
+    <label>Player Pic URL:</label>
+    <br />
+    <input
+      name="playerPic"
+      class="form-control form-control-md"
+      type="String"
+      autocomplete="off"
+      aria-label=".form-control-lg"
+    />
+    <br />
+    <select name="team">
+      <% allTeams.forEach(team => { %>
+      <option value="<%= team.id %>"><%= team.name %></option>
+      <% }) %>
+    </select>
+    <input type="submit" value="Add Player" />
+  </form>
 </div>
-
-
-
-
-
-
-
-
-
-
 
 <%-include('../partials/footer')%>

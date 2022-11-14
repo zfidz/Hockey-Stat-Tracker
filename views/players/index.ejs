@@ -1,8 +1,8 @@
 <%- include('../partials/header') %>
-
+<p class='show-header text-center'>All Players</p>
 
   <div class="container-sm text-center col-5">
-    <table class="table table-striped">
+    <table id="tables" class="table table-striped">
       <thead>
         <tr>
           <th scope="col">Name:</th>
@@ -32,15 +32,18 @@
             </td>
             <td>
               <%=p.assists%>
-            </td>
-            <td>
+            </td>    
+<% if (user) { %>
+            <td>  <button type="button" class="btn btn-secondary btn-sm"><a href="/players/<%=p._id%>/edit"
+                  style="text-decoration: none; color: inherit">Update</a></button></td>
+   <td>
               <form action="/players/<%=p._id%>?_method=DELETE" method="POST">
                 <button type="submit" class="btn btn-danger btn-sm">REMOVE</button>
               </form>
             </td>
-            <td><button type="button" class="btn btn-secondary btn-sm"><a href="/players/<%=p._id%>/edit"
-                  style="text-decoration: none; color: inherit">Update</a></button></td>
-  </div>
+       <% } else { %>
+      <% } %>           
+          </div>
   </div>
   </form>
   </div>
@@ -49,11 +52,12 @@
     </tbody>
     </table>
     </div>
+    
 
 
     <%- include('../partials/footer') %>
 
-    <td><button class ="btn btn-danger btn-sm" onclick="document.getElementById('id01').style.display='block'">Delete</button></td>
+    <!-- <td><button class ="btn btn-danger btn-sm" onclick="document.getElementById('id01').style.display='block'">Delete</button></td>
     <div id="id01" class="modal">
       <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
       <form class="modal-content">
@@ -61,4 +65,4 @@
           <h1>Delete Team</h1>
           <p>Are you sure you want to delete <%#=p.firstName%> <%#=p.lastName%>?</p>
           <div class="clearfix">
-            <button type="button" class ="btn btn-secondary btn-sm"><a href="/players" style ="text-decoration: none; color: inherit">Cancel</a></button>
+            <button type="button" class ="btn btn-secondary btn-sm"><a href="/players" style ="text-decoration: none; color: inherit">Cancel</a></button> -->

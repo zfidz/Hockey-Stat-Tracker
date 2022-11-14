@@ -1,53 +1,104 @@
 <%- include('../partials/header') %>
-<div class="container-sm vertical-center text-center col-3" >
+<p class="show-header text-center">New Team</p>
 
-<form id="new-form" action="/teams" method="POST">
-     <label>City:</label>
-   <br />
-
-  <input name="city" class="form-control form-control-lg" type="String" autocomplete="off" >
-   <br />
-   <label>Name:</label>
-  <br />
-   <input name="name" class="form-control form-control-lg" type="String" autocomplete="off" >
+<div class="d-flex align-items-center justify-content-center text-center">
+  <form id="form" action="/teams" method="POST">
+    <label>City:</label>
+    <br />
+    <input
+      name="city"
+      class="form-control form-control-md"
+      type="String"
+      autocomplete="off"
+    />
+    <br />
+    <label>Name:</label>
+    <br />
+    <input
+      name="name"
+      class="form-control form-control-md"
+      type="String"
+      autocomplete="off"
+    />
     <br />
     <label>Arena</label>
     <br />
-    <input name="arena" class="form-control form-control-lg" type="String" autocomplete="off" >
-     <br />
-     <label>Year Established:</label>
-     <br />
-     <input name="year" class="form-control form-control-lg" type="Number" autocomplete="off" >
-      <br />
-      <label>Stanley Cups:</label>
-      <br />
-      <input name="cups" class="form-control form-control-lg" type="Number" autocomplete="off" >
-       <br />
-       <label>Points:</label>
-      <br />
-      <input name="points" class="form-control form-control-lg" type="Number" autocomplete="off" >
-       <br />
-       <label>Games Played:</label>
-       <br />
-       <input name="gamesPlayed" class="form-control form-control-lg" type="Number" autocomplete="off" >
-        <br />
-        <label>Wins:</label>
-        <br />
-        <input name="wins" class="form-control form-control-lg" type="Number" autocomplete="off" >
-         <br />
-         <label>Losses</label>
-         <br />
-         <input name="losses" class="form-control form-control-lg" type="Number" autocomplete="off" >
-          <br />
-  <label>Overtime Losses</label>
-  <br />
-  <input name="otl" class="form-control form-control-lg" type="Number" >
-   <br />
-             <label>Logo URL:</label>
-          <br>
-          <input type="String" name="logo" class="form-control text-center form-control-lg" required />
-         <br />
-  <input type="submit" value="Add Team"/>
-</form>
+    <input
+      name="arena"
+      class="form-control form-control-md"
+      type="String"
+      autocomplete="off"
+    />
+    <br />
+    <label>Year Established:</label>
+    <br />
+    <input
+      name="year"
+      class="form-control form-control-md"
+      type="Number"
+      autocomplete="off"
+    />
+    <br />
+    <label>Stanley Cups:</label>
+    <br />
+    <input
+      name="cups"
+      class="form-control form-control-md"
+      type="Number"
+      autocomplete="off"
+    />
+    <br />
+    <label>Points:</label>
+    <br />
+
+    <input
+      name="points"
+      class="form-control form-control-md"
+      type="Number"
+      autocomplete="off"
+    />
+    <br />
+    <label>Games Played:</label>
+    <br />
+    <input
+      name="gamesPlayed"
+      class="form-control form-control-md"
+      type="Number"
+      autocomplete="off"
+    />
+    <br />
+    <label>Wins:</label>
+    <br />
+    <input
+      name="wins"
+      class="form-control form-control-md"
+      type="Number"
+      autocomplete="off"
+    />
+    <br />
+    <label>Losses</label>
+    <br />
+    <input
+      name="losses"
+      class="form-control form-control-md"
+      type="Number"
+      autocomplete="off"
+    />
+    <br />
+    <label>Overtime Losses</label>
+    <br />
+    <input name="otl" class="form-control form-control-md" type="Number" />
+    <br />
+    <label>Logo URL:</label>
+    <br />
+    <input
+      type="String"
+      name="logo"
+      class="form-control text-center form-control-md"
+    
+    />
+    <br />
+    <input type="submit" value="Add Team" />
+  </form>
 </div>
 <%- include('../partials/footer') %>

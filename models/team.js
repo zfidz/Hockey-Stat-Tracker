@@ -12,7 +12,7 @@ const teamSchema = new Schema({
   wins: Number,
   losses: Number,
   otl: Number,
-  logo: String
+  logo: {type:String, default: "/pictures/pngfind.com-white-question-mark-png-23867.png"}
 });
 
 module.exports = mongoose.model("Team", teamSchema);

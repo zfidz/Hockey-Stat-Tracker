@@ -13,7 +13,7 @@ const playerSchema = new Schema({
   pim: Number,
   plusMinus: Number,
   team: [{ type: Schema.Types.ObjectId, ref: "Team" }],
-  playerPic: String
-})
+  playerPic: {type: String, default: "/pictures/pngfind.com-white-question-mark-png-23867.png"}
+});
 
 module.exports = mongoose.model("Player", playerSchema);
