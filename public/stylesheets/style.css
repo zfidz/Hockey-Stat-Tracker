@@ -6,7 +6,10 @@ body {
   background-position: center;
   background-size: cover;
 }
-
+ #nav-stuff {
+  font-size: 30px;
+  font-family: 'Graduate', cursive;
+ }
 
 #show-content{
   width: 400px;
