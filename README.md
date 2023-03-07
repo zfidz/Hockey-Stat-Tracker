@@ -9,16 +9,16 @@ Welcome to the ultimate stat tracker for hockey enthusiasts! Get ready to dive i
  ## Technologies that Power the Madness 🚀
 Prepare yourself for an incredible blend of cutting-edge technologies that make this stat tracker a force to be reckoned with:
 
--HTML: The foundation upon which our web pages come to life.
--CSS: Styling magic that creates an immersive and visually stunning experience.
--JavaScript: The powerhouse behind the interactivity and dynamic features.
--EJS: A templating engine that brings unparalleled flexibility and simplicity to our project.
--Node: The mighty backend technology that powers our stat tracker with robust functionality.
--MongoDB: A state-of-the-art database management system that securely stores all your precious stats.
--Express: The backbone of our server, providing seamless communication between front and back ends.
--OAuth: Your passport to a personalized and secure profile experience.
--Trello: Our trusty companion for project management, ensuring smooth progress every step of the way.
--Figma: The creative genius behind our breathtaking ERD (Entity Relationship Diagram) and wireframes.
+- **HTML**: The foundation upon which our web pages come to life.
+- **CSS**: Styling magic that creates an immersive and visually stunning experience.
+- **JavaScript**: The powerhouse behind the interactivity and dynamic features.
+- **EJS**: A templating engine that brings unparalleled flexibility and simplicity to our project.
+- **Node**: The mighty backend technology that powers our stat tracker with robust functionality.
+- **MongoDB**: A state-of-the-art database management system that securely stores all your precious stats.
+- **Express**: The backbone of our server, providing seamless communication between front and back ends.
+- **OAuth**: Your passport to a personalized and secure profile experience.
+- **Trello**: Our trusty companion for project management, ensuring smooth progress every step of the way.
+- **Figma**: The creative genius behind our breathtaking ERD (Entity Relationship Diagram) and wireframes.
 
 ## Behold, the Visual Spectacle! 📸
 
@@ -56,9 +56,9 @@ To keep our development journey on track, we rely on the trusty assistance of Tr
 
 My mission to deliver the ultimate hockey stats experience doesn't end here! Stay tuned for these thrilling future updates:
 
-- Profile Page: Unleash your passion for the game by showcasing your favorite teams and players on your personalized profile page.
-- API Integration: Tap into the vast resources of hockey data available through APIs, opening up a world of endless possibilities for exploring and analyzing stats like never before.
-- Get ready to be captivated by the exhilarating world of hockey stats like never before! Join us on this extraordinary journey and let the games begin! 🏒⛸️
+- **Profile Page**: Unleash your passion for the game by showcasing your favorite teams and players on your personalized profile page.
+- **API Integration**: Tap into the vast resources of hockey data available through APIs, opening up a world of endless possibilities for exploring and analyzing stats like never before.
+- **Get ready to be captivated by the exhilarating world of hockey stats like never before! Join us on this extraordinary journey and let the games begin!** 🏒⛸️
 
 ## Pseudocode
 
