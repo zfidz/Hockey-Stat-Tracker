@@ -7,6 +7,7 @@ Welcome to the ultimate stat tracker for hockey enthusiasts! Get ready to dive i
 ⚠️ Note: To unlock the full potential of our stat tracker, make sure to sign in with your Google account. Don't miss out on the exclusive features available only to registered users! You'll gain the ability to add teams, players, and even edit player profiles. Strap in and get ready to experience hockey stats like a pro!
 
  ## Technologies that Power the Madness 🚀
+ 
 Prepare yourself for an incredible blend of cutting-edge technologies that make this stat tracker a force to be reckoned with:
 
 - **HTML**: The foundation upon which our web pages come to life.
